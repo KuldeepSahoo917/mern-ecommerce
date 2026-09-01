@@ -1,8 +1,8 @@
 const orderRouter = require("express").Router();
 const asyncHandler = require("express-async-handler");
-const protect = require("../Middleware/AuthMiddleware");
+const { protect, admin } = require("../Middleware/AuthMiddleware");
 const Order = require("./../Models/OrderModel");
-const admin = require("../Middleware/AuthMiddleware");
+
 
 // CREATE ORDER
 orderRouter.post(

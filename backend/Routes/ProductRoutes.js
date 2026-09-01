@@ -1,8 +1,7 @@
 const productRoute = require("express").Router();
 const asyncHandler = require("express-async-handler");
 const Product = require("../Models/ProductModel");
-const protect = require("./../Middleware/AuthMiddleware");
-const admin = require("../Middleware/AuthMiddleware");
+const { protect, admin } = require("./../Middleware/AuthMiddleware");
 
 // GET ALL PRODUCT
 productRoute.get(

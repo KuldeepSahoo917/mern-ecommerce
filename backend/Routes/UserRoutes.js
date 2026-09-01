@@ -1,7 +1,6 @@
 const userRouter = require("express").Router();
 const asyncHandler = require("express-async-handler");
-const protect = require("../Middleware/AuthMiddleware");
-const admin = require("../Middleware/AuthMiddleware");
+const { protect, admin } = require("./../Middleware/AuthMiddleware");
 const generateToken = require("../utils/generateToken");
 const User = require("./../Models/UserModel");
 

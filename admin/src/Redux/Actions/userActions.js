@@ -29,7 +29,7 @@ export const login = (email, password) => async (dispatch) => {
     };
 
     const { data } = await axios.post(
-      `https://akash-ecommerce-server.herokuapp.com/api/users/login`,
+      `http://localhost:5000/api/users/login`,
       { email, password },
       config
     );
@@ -81,7 +81,7 @@ export const listUser = () => async (dispatch, getState) => {
       },
     };
 
-    const { data } = await axios.get(`https://akash-ecommerce-server.herokuapp.com/api/users`, config);
+    const { data } = await axios.get(`http://localhost:5000/api/users`, config);
 
     dispatch({ type: USER_LIST_SUCCESS, payload: data });
   } catch (error) {

@@ -9,7 +9,7 @@ import {
 
 // ADD TO CART
 export const addToCart = (id, qty) => async (dispatch, getState) => {
-    const { data } = await axios.get(`https://akash-ecommerce-server.herokuapp.com/api/products/${id}`);
+    const { data } = await axios.get(`http://localhost:5000/api/products/${id}`);
 
     dispatch({
         type: CART_ADD_ITEM,
