@@ -15,10 +15,10 @@
 * Redux to manage application's state
 * Redux Thunk middleware to handle asynchronous redux actions
 
-#### Deployed in: https://akash-ecommerce-store.netlify.app/
-#### Admin Dashboard: https://ecommerce-admindashboard.netlify.app/
+#### Deployed in: 
+#### Admin Dashboard:
 
-#### Watch Project Preview Video: https://drive.google.com/file/d/1Q-wxMutkhlna88goiyx-RMDpVCQhUotE/view?usp=sharing
+#### Watch Project Preview Video: 
 
 ### 🏆 Specifications
 
@@ -96,7 +96,5 @@ JWT_SECRET
 MONGO_URL
 ```
 
-## 💬 Contact.
- * [![Akash Jain](https://custom-icon-badges.herokuapp.com/badge/-Akash%20Jain-%23181717?style=flat&logo=github&logoColor=white&labelColor=111)](https://github.com/Akash20x)
 
 
