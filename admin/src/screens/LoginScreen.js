@@ -16,7 +16,7 @@ const Login = ({ history }) => {
   const { error, loading, userInfo } = userLogin;
 
   useEffect(() => {
-    if (userInfo) {
+    if (userInfo && userInfo.isAdmin) {
       history.push("/");
     }
   }, [userInfo, history]);

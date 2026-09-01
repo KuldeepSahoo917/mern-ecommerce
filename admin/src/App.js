@@ -45,7 +45,7 @@ function App() {
             path="/product/:id/edit"
             component={ProductEditScreen}
           />
-          <PrivateRouter path="*" component={NotFound} />
+          <Route path="*" component={NotFound} />
         </Switch>
       </Router>
     </>

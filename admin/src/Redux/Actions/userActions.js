@@ -8,7 +8,7 @@ import {
   USER_LOGIN_SUCCESS,
   USER_LOGOUT,
 } from "../Constants/UserContants";
-import axios from "axios";
+import axios from "../axios";
 import { toast } from "react-toastify";
 
 // LOGIN
@@ -29,7 +29,7 @@ export const login = (email, password) => async (dispatch) => {
     };
 
     const { data } = await axios.post(
-      `http://localhost:5000/api/users/login`,
+      `/api/users/login`,
       { email, password },
       config
     );
@@ -81,7 +81,7 @@ export const listUser = () => async (dispatch, getState) => {
       },
     };
 
-    const { data } = await axios.get(`http://localhost:5000/api/users`, config);
+    const { data } = await axios.get(`/api/users`, config);
 
     dispatch({ type: USER_LIST_SUCCESS, payload: data });
   } catch (error) {
@@ -98,3 +98,4 @@ export const listUser = () => async (dispatch, getState) => {
     });
   }
 };
+

@@ -10,7 +10,7 @@ import {
   ORDER_LIST_SUCCESS,
 } from "../Constants/OrderConstants";
 import { logout } from "./userActions";
-import axios from "axios";
+import axios from "../axios";
 
 export const listOrders = () => async (dispatch, getState) => {
   try {
@@ -26,7 +26,7 @@ export const listOrders = () => async (dispatch, getState) => {
       },
     };
 
-    const { data } = await axios.get(`http://localhost:5000/api/orders/all`, config);
+    const { data } = await axios.get(`/api/orders/all`, config);
 
     dispatch({ type: ORDER_LIST_SUCCESS, payload: data });
   } catch (error) {
@@ -59,7 +59,7 @@ export const getOrderDetails = (id) => async (dispatch, getState) => {
       },
     };
 
-    const { data } = await axios.get(`http://localhost:5000/api/orders/${id}`, config);
+    const { data } = await axios.get(`/api/orders/${id}`, config);
     dispatch({ type: ORDER_DETAILS_SUCCESS, payload: data });
   } catch (error) {
     const message =
@@ -92,7 +92,7 @@ export const deliverOrder = (order) => async (dispatch, getState) => {
     };
 
     const { data } = await axios.put(
-      `http://localhost:5000/api/orders/${order._id}/delivered`,
+      `/api/orders/${order._id}/delivered`,
       {},
       config
     );
@@ -111,3 +111,4 @@ export const deliverOrder = (order) => async (dispatch, getState) => {
     });
   }
 };
+
