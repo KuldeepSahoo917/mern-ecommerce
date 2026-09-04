@@ -75,8 +75,8 @@ git clone https://github.com/KuldeepSahoo917/mern-ecommerce.git
 
 For Client:
 cd mern-ecommerce/frontend
-Insert your respective environment variables in .env file
-REACT_API_URL=IP-ADDRESS:5000
+//Insert your respective environment variables in .env file
+//REACT_API_URL=IP-ADDRESS:5000
 
 For Server:
 cd mern-ecommerce/backend
@@ -84,15 +84,16 @@ Insert your respective environment variables in .env file
 
 For Admin:
 cd mern-ecommerce/admin
-Insert your respective environment variables in .env file
-REACT_API_URL=IP-ADDRESS:5000
+//Insert your respective environment variables in .env file
+//REACT_API_URL=IP-ADDRESS:5000
 
 Install all dependencies:
 npm install
 Before running next Command
 --> In Powershell
-
+$env:NODE_OPTIONS="--openssl-legacy-provider"
 --> In Linux
+export NODE_OPTIONS=--openssl-legacy-provider
 npm start
 ```
 
