@@ -76,7 +76,7 @@ git clone https://github.com/KuldeepSahoo917/mern-ecommerce.git
 For Client:
 cd mern-ecommerce/frontend
 //Insert your respective environment variables in .env file
-//REACT_API_URL=IP-ADDRESS:5000
+//REACT_APP_API_URL=IP-ADDRESS:5000
 
 For Server:
 cd mern-ecommerce/backend
@@ -85,7 +85,7 @@ Insert your respective environment variables in .env file
 For Admin:
 cd mern-ecommerce/admin
 //Insert your respective environment variables in .env file
-//REACT_API_URL=IP-ADDRESS:5000
+//REACT_APP_API_URL=IP-ADDRESS:5000
 
 Install all dependencies:
 npm install
