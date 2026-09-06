@@ -108,6 +108,11 @@ http://backend:5000
 
 Here, `backend` is the Docker Compose service name.
 
+In MONGO_DB Cluster
+```text
+Always check you have added your current IP Address.
+```
+
 ---
 
 # 📥 Installation and Setup
