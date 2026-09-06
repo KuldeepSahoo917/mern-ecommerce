@@ -135,7 +135,10 @@ The backend requires environment variables for MongoDB, authentication, and PayP
 Create the backend `.env` file:
 
 ```bash
-touch backend/.env
+vi backend/.env
+```
+```bash
+notepad backend/.env
 ```
 
 Or create it manually inside the `backend` folder.
@@ -826,40 +829,46 @@ Example:
 
 
 ### How to run locally
-```
+
 git clone https://github.com/KuldeepSahoo917/mern-ecommerce.git
 
 For Client:
+```bash
 cd mern-ecommerce/frontend
+```
 //Insert your respective environment variables in .env file
 //REACT_APP_API_URL=IP-ADDRESS:5000
 
 For Server:
+```bash
 cd mern-ecommerce/backend
+```
 Insert your respective environment variables in .env file
 
 For Admin:
+```bash
 cd mern-ecommerce/admin
+```
 //Insert your respective environment variables in .env file
 //REACT_APP_API_URL=IP-ADDRESS:5000
 
 Install all dependencies:
+```bash
 npm install
+```
 Before running next Command
 --> In Powershell
+```bash
 $env:NODE_OPTIONS="--openssl-legacy-provider"
+```
 --> In Linux
+```bash
 export NODE_OPTIONS=--openssl-legacy-provider
+```
+```bash
 npm start
 ```
 
-### Env Variables
-
-```
-PAYPAL_CLIENT_ID
-JWT_SECRET
-MONGO_URL
-```
 
 
 
