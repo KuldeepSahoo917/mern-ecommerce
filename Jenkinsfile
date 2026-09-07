@@ -18,8 +18,14 @@ pipeline {
 
         stage('Deploy Application') {
             steps {
-                sh 'docker compose down'
-                sh 'docker compose up -d'
+                withCredentials([
+                    string(credentialsId: 'PAYPAL_CLIENT_ID', variable: 'PAYPAL_CLIENT_ID'),
+                    string(credentialsId: 'JWT_SECRET', variable: 'JWT_SECRET'),
+                    string(credentialsId: 'MONGO_URL', variable: 'MONGO_URL')
+                ]) {
+                    sh 'docker compose down'
+                    sh 'docker compose up -d'
+                }
             }
         }
 
