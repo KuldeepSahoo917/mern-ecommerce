@@ -18,9 +18,9 @@ pipeline {
 
         stage('Security Scan') {
             steps {
-                sh 'trivy image mern-ecommerce-ci-cd-backend:latest'
-                sh 'trivy image mern-ecommerce-ci-cd-frontend:latest'
-                sh 'trivy image mern-ecommerce-ci-cd-admin:latest'
+                sh 'trivy image --severity HIGH,CRITICAL --exit-code 1 mern-ecommerce-ci-cd-backend:latest'
+                sh 'trivy image --severity HIGH,CRITICAL --exit-code 1 mern-ecommerce-ci-cd-frontend:latest'
+                sh 'trivy image --severity HIGH,CRITICAL --exit-code 1  mern-ecommerce-ci-cd-admin:latest'
             }
         }
 
