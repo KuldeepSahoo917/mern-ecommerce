@@ -326,7 +326,9 @@ mern-admin
 ---
 # JENKINS SETUP
 ---
-
+---
+# TRIVY IMAGE SCAN
+---
 # 🌍 9. Access the Application
 
 Replace `YOUR-EC2-IP` with your EC2 public IP address.
