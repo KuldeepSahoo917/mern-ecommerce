@@ -14,11 +14,17 @@
 
 # 📚 Tech Stack
 Frontend: React, Redux, Axios
+
 Backend: Node.js, Express.js, MongoDB
+
 Authentication: JWT, BcryptJS
+
 Payment: PayPal
+
 Deployment: Docker, Docker Compose, Nginx, AWS EC2
+
 CI/CD: Jenkins, GitHub Webhook
+
 Security: Trivy
 
 
