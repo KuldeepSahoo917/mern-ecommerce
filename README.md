@@ -2,10 +2,7 @@
   
 # Ecommerce Mern
 </div>
-
-
-<h2>:speech_balloon: Project</h2>
-<p>This is a FULL Stack Ecommerce website which includes all the features that a Ecommerce website will usually have. It comes with a Admin Dashboard and Enabled Payment using Paypal.
+<p>This is a Full-stack Ecommerce website.
 </p>
 
 * Node provides the backend environment for this application
@@ -15,58 +12,15 @@
 * Redux to manage application's state
 * Redux Thunk middleware to handle asynchronous redux actions
 
-#### Deployed in: 
-#### Admin Dashboard:
+# 📚 Tech Stack
+Frontend: React, Redux, Axios
+Backend: Node.js, Express.js, MongoDB
+Authentication: JWT, BcryptJS
+Payment: PayPal
+Deployment: Docker, Docker Compose, Nginx, AWS EC2
+CI/CD: Jenkins, GitHub Webhook
+Security: Trivy
 
-
-### 🏆 Specifications
-
-* User Authentication (Login / Signup)
-* Products with thier detailed view
-* Search Products
-* User Profile
-* Check your orders and update your profile
-* Payment Integration using paypal
-* Add product rating and review
-* Modern UI
-* Admin Dashboard
-* Admin add, delete and update products
-* Admin check total sales, orders and products
-* Check and update order status of different users 
-
-## Website Interface
-
-<img src="https://user-images.githubusercontent.com/46225357/188305060-eed6270c-202d-4c98-8ad2-2ac4e9db26b3.png" height="400" />
-
-## Admin Dashboard
-
-<img src="https://user-images.githubusercontent.com/46225357/188317332-3cdfadb5-4eb2-4a98-9d06-7c5c058dc0d3.png" height="400" />
-
-
-
-
-# 📚 Technology Stack
-
-## Frontend
-
-- React
-- Axios
-- Moment
-- Redux
-- Web Vitals
-- react-toastify
-- react-router-dom
-- react-paypal-button-v2
-
-## Backend
-
-- Nodejs
-- ExpressJS
-- MongoDB
-- JSON Web Token
-- BcryptJS
-- Morgan
-- CORS
 
 # 🏗️ Application Architecture
 
