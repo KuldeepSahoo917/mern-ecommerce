@@ -77,6 +77,48 @@ Always check you have added your current IP Address.
 
 # 📥 Installation and Setup
 
+## How to run locally
+```bash
+git clone https://github.com/KuldeepSahoo917/mern-ecommerce.git
+```
+
+For Client:
+```bash
+cd mern-ecommerce/frontend
+```
+//Insert your respective environment variables in .env file
+//REACT_APP_API_URL=IP-ADDRESS:5000
+
+For Server:
+```bash
+cd mern-ecommerce/backend
+```
+Insert your respective environment variables in .env file
+
+For Admin:
+```bash
+cd mern-ecommerce/admin
+```
+//Insert your respective environment variables in .env file
+//REACT_APP_API_URL=IP-ADDRESS:5000
+
+Install all dependencies:
+```bash
+npm install
+```
+Before running next Command
+--> In Powershell
+```bash
+$env:NODE_OPTIONS="--openssl-legacy-provider"
+```
+--> In Linux
+```bash
+export NODE_OPTIONS=--openssl-legacy-provider
+```
+```bash
+npm start
+```
+
 ## 1. Clone the Repository
 
 Clone the repository:
@@ -93,7 +135,7 @@ cd mern-ecommerce
 
 ---
 
-# 🔐 2. Configure Environment Variables
+# 2. Configure Environment Variables
 
 The backend requires environment variables for MongoDB, authentication, and PayPal.
 
@@ -118,11 +160,11 @@ PAYPAL_CLIENT_ID=your_paypal_client_id
 
 Replace the values with your actual credentials.
 
-> ⚠️ **Important:** Never commit your `.env` file or expose your credentials publicly.
+**Important:** Never commit your `.env` file or expose your credentials publicly.
 
 ---
 
-# 🌐 3. Frontend Environment Variables
+# 3. Frontend Environment Variables
 
 The frontend does **not** require:
 
@@ -142,7 +184,7 @@ Nginx automatically forwards these requests to the backend container.
 
 ---
 
-# 🖥️ 4. Admin Environment Variables
+# 4. Admin Environment Variables
 
 The admin application also does **not** require:
 
@@ -166,7 +208,7 @@ http://backend:5000
 
 ---
 
-# 🐳 5. Install Docker
+# 5. Install Docker
 
 Make sure Docker is installed on the machine.
 
@@ -186,7 +228,7 @@ If both commands display their versions, Docker is ready.
 
 ---
 
-# 🏗️ 6. Build and Run the Application
+# 6. Build and Run the Application
 
 From the project root directory:
 
@@ -223,7 +265,7 @@ The `--build` option tells Docker Compose to build the images before starting th
 
 ---
 
-# 📦 7. Docker Build Process
+# 7. Docker Build Process
 
 The frontend and admin applications use a multi-stage Docker build.
 
@@ -262,7 +304,7 @@ The backend is built separately using its Node.js Dockerfile.
 
 ---
 
-# 🔍 8. Check Running Containers
+# 8. Check Running Containers
 
 After starting the application, check the Docker Compose services:
 
@@ -289,7 +331,7 @@ mern-admin
 ---
 # TRIVY IMAGE SCAN
 ---
-# 🌍 9. Access the Application
+# 9. Access the Application
 
 Replace `YOUR-EC2-IP` with your EC2 public IP address.
 
@@ -313,7 +355,7 @@ http://YOUR-EC2-IP:5000
 
 ---
 
-# 🔄 10. API Request Flow
+# 10. API Request Flow
 
 The frontend sends API requests using:
 
@@ -371,7 +413,7 @@ backend:5000
 
 ---
 
-# 🛑 11. Stop the Application
+# 11. Stop the Application
 
 To stop and remove the Docker containers:
 
@@ -385,7 +427,7 @@ The Docker images are not removed.
 
 ---
 
-# ▶️ 12. Start the Application Again
+# 12. Start the Application Again
 
 If the containers already exist, start them using:
 
@@ -397,7 +439,7 @@ There is no need to rebuild the images unless you have made application or Docke
 
 ---
 
-# 🔨 13. Rebuild After Code Changes
+# 13. Rebuild After Code Changes
 
 Whenever you make changes to the application source code, rebuild the Docker images:
 
@@ -416,7 +458,7 @@ docker compose up -d --build
 
 ---
 
-# 🧹 14. Force a Fresh Docker Build
+# 14. Force a Fresh Docker Build
 
 If you experience Docker caching issues, use:
 
@@ -440,7 +482,7 @@ The `--no-cache` option forces Docker to rebuild the images without using previo
 
 ---
 
-# 📋 15. View Application Logs
+# 15. View Application Logs
 
 View logs from all services:
 
@@ -474,7 +516,7 @@ docker compose logs admin
 
 ---
 
-# 🔄 16. Restart Services
+# 16. Restart Services
 
 Restart the backend:
 
@@ -496,7 +538,7 @@ docker compose restart admin
 
 ---
 
-# 🐳 17. Docker Images
+# 17. Docker Images
 
 View all Docker images:
 
@@ -506,7 +548,7 @@ docker images
 
 ---
 
-# 📦 18. Docker Containers
+# 18. Docker Containers
 
 View running containers:
 
@@ -522,7 +564,7 @@ docker ps -a
 
 ---
 
-# 🗑️ 19. Remove Containers and Images
+# 19. Remove Containers and Images
 
 To stop and remove the containers:
 
@@ -536,13 +578,13 @@ To remove the containers and Docker images created by Compose:
 docker compose down --rmi all
 ```
 
-> ⚠️ Use `--rmi all` only when you want to remove the Docker images as well.
+> Use `--rmi all` only when you want to remove the Docker images as well.
 
 ---
 
 # ☁️ AWS EC2 Deployment
 
-## 20. Connect to the EC2 Instance
+# 1.Connect to the EC2 Instance
 
 Connect to your Ubuntu EC2 instance using SSH.
 
@@ -560,7 +602,7 @@ cd mern-ecommerce
 
 ---
 
-# 🔐 21. Configure Backend Environment on EC2
+# 2.Configure Backend Environment on EC2
 
 Create the backend environment file:
 
@@ -580,7 +622,7 @@ Save the file.
 
 ---
 
-# 🐳 22. Deploy the Application on EC2
+# 3.Deploy the Application on EC2
 
 From the project root:
 
@@ -598,7 +640,7 @@ If all services are running, the application is ready.
 
 ---
 
-# 🔒 23. AWS Security Group
+# 4.AWS Security Group
 
 If accessing the application directly through the EC2 public IP, allow the required ports in the EC2 Security Group:
 
@@ -612,7 +654,7 @@ For production environments, it is recommended to place the application behind a
 
 ---
 
-# 🔄 24. Update the Application
+# 5.Update the Application
 
 After making new changes and pushing them to GitHub, connect to your EC2 instance.
 
@@ -642,7 +684,7 @@ docker compose ps
 
 ---
 
-# 📌 25. EC2 Public IP
+## EC2 Public IP
 
 The React applications do not contain a hardcoded EC2 public IP for API communication.
 
@@ -676,7 +718,7 @@ For a permanent public IP, an AWS Elastic IP can be associated with the EC2 inst
 
 ---
 
-# ⚡ Quick Start
+# Quick Start
 
 For a fresh deployment:
 
@@ -702,77 +744,7 @@ Backend  → http://YOUR-EC2-IP:5000
 
 ---
 
-# 🛠️ Common Docker Commands
-
-### Check Docker version
-
-```bash
-docker --version
-```
-
-### Check Docker Compose version
-
-```bash
-docker compose version
-```
-
-### Build and start application
-
-```bash
-docker compose up -d --build
-```
-
-### Start existing containers
-
-```bash
-docker compose up -d
-```
-
-### Stop application
-
-```bash
-docker compose down
-```
-
-### Check services
-
-```bash
-docker compose ps
-```
-
-### Check containers
-
-```bash
-docker ps
-```
-
-### Check all containers
-
-```bash
-docker ps -a
-```
-
-### Check images
-
-```bash
-docker images
-```
-
-### View logs
-
-```bash
-docker compose logs -f
-```
-
-### Rebuild without cache
-
-```bash
-docker compose build --no-cache
-```
-
----
-
-# 🔐 Security
+# Security
 
 Never commit sensitive credentials to GitHub.
 
@@ -794,49 +766,6 @@ Example:
 ```
 
 ---
-
-
-### How to run locally
-
-git clone https://github.com/KuldeepSahoo917/mern-ecommerce.git
-
-For Client:
-```bash
-cd mern-ecommerce/frontend
-```
-//Insert your respective environment variables in .env file
-//REACT_APP_API_URL=IP-ADDRESS:5000
-
-For Server:
-```bash
-cd mern-ecommerce/backend
-```
-Insert your respective environment variables in .env file
-
-For Admin:
-```bash
-cd mern-ecommerce/admin
-```
-//Insert your respective environment variables in .env file
-//REACT_APP_API_URL=IP-ADDRESS:5000
-
-Install all dependencies:
-```bash
-npm install
-```
-Before running next Command
---> In Powershell
-```bash
-$env:NODE_OPTIONS="--openssl-legacy-provider"
-```
---> In Linux
-```bash
-export NODE_OPTIONS=--openssl-legacy-provider
-```
-```bash
-npm start
-```
-
 
 
 
