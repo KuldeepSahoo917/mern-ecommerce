@@ -1,6 +1,6 @@
 <div align="center">
   
-# Ecommerce Mern
+# Ecommerce Website
 </div>
 <p>This is a Full-stack Ecommerce website.
 </p>
